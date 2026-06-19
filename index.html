@@ -1,19 +1,159 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ForgeMind</title>
 
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      line-height: 1.6;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 32px 20px;
+    }
+
+    header {
+      padding: 60px 0 50px;
+    }
+
+    .badge {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 8px 14px;
+      border: 1px solid #334155;
+      border-radius: 999px;
+      color: #cbd5e1;
+      font-size: 14px;
+    }
+
+    h1 {
+      font-size: clamp(42px, 8vw, 76px);
+      line-height: 1;
+      margin-bottom: 24px;
+      letter-spacing: -2px;
+    }
+
+    .hero-text {
+      max-width: 680px;
+      font-size: clamp(20px, 4vw, 28px);
+      color: #cbd5e1;
+    }
+
+    section {
+      margin: 40px 0;
+      padding: 32px;
+      border: 1px solid #1e293b;
+      border-radius: 24px;
+      background: #111827;
+    }
+
+    h2 {
+      margin-bottom: 14px;
+      font-size: 24px;
+    }
+
+    h3 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: #cbd5e1;
+      margin-bottom: 16px;
+    }
+
+    .tagline {
+      color: #93c5fd;
+      font-weight: bold;
+    }
+
+    a {
+      color: #93c5fd;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      padding: 32px 0;
+      color: #64748b;
+      font-size: 14px;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 40px 0 32px;
+      }
+
+      section {
+        padding: 24px;
+        border-radius: 18px;
+      }
+    }
+  </style>
 </head>
 
 <body>
+  <div class="container">
 
-  <h1>ForgeMind</h1>
+    <header>
+      <div class="badge">Independent software studio</div>
+      <h1>ForgeMind</h1>
+      <p class="hero-text">
+        Building practical software, AI tools and digital products.
+      </p>
+    </header>
 
-  <p>Building practical software, AI tools and digital products.</p>
+    <main>
+      <section>
+        <h2>About</h2>
+        <p>
+          ForgeMind is an independent software studio focused on creating useful
+          digital products powered by software, automation and artificial intelligence.
+        </p>
+      </section>
 
+      <section>
+        <h2>Current Project</h2>
+        <h3>CartVerdict</h3>
+        <p class="tagline">Know before you buy.</p>
+        <p>
+          CartVerdict helps users make smarter purchasing decisions before spending
+          money by providing quick AI-powered insights and recommendations.
+        </p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>
+          Have a question or want to connect?
+        </p>
+        <p>
+          <a href="mailto:info@forgemind.eu">info@forgemind.eu</a>
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      © 2026 ForgeMind
+    </footer>
+
+  </div>
 </body>
-
 </html>
