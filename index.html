@@ -61,6 +61,20 @@
       background: #111827;
     }
 
+    .project-link {
+      display: block;
+      color: inherit;
+      text-decoration: none;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .project-link:hover {
+      transform: translateY(-3px);
+      border-color: #3b82f6;
+      background: #162033;
+      text-decoration: none;
+    }
+
     h2 {
       margin-bottom: 14px;
       font-size: 24px;
@@ -129,15 +143,17 @@
         </p>
       </section>
 
-      <section a href="http://cartverdict.forgemind.eu">
-        <h2>Current Project</h2>
-        <h3>CartVerdict</h3>
-        <p class="tagline">Know before you buy.</p>
-        <p>
-          CartVerdict helps users make smarter purchasing decisions before spending
-          money by providing quick AI-powered insights and recommendations.
-        </p>
-      </section /a>
+      <a href="http://cartverdict.forgemind.eu" class="project-link">
+        <section>
+          <h2>Current Project</h2>
+          <h3>CartVerdict</h3>
+          <p class="tagline">Know before you buy.</p>
+          <p>
+            CartVerdict helps users make smarter purchasing decisions before spending
+            money by providing quick AI-powered insights and recommendations.
+          </p>
+        </section>
+      </a>
 
       <section>
         <h2>Contact</h2>
