@@ -1,0 +1,191 @@
+@import "tailwindcss";
+
+/* ==========================================
+   FORGEMIND — DESIGN SYSTEM v2.1
+   ========================================== */
+
+:root {
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  color: #f8fafc;
+  background: #111827;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+
+  --fm-bg: #111827;
+  --fm-surface: #172337;
+  --fm-surface-light: #1e2d43;
+
+  --fm-primary: #4f8cff;
+  --fm-primary-light: #73a5ff;
+
+  --fm-text: #f8fafc;
+  --fm-muted: #a7b4c8;
+
+  --fm-border: rgba(255, 255, 255, 0.09);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background: var(--fm-bg);
+}
+
+::selection {
+  background: var(--fm-primary);
+  color: white;
+}
+
+/* ==========================================
+   HERO — REFINED BACKGROUND
+   ========================================== */
+
+.forgemind-hero {
+  position: relative;
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      ellipse at 85% 40%,
+      rgba(79, 140, 255, 0.14) 0%,
+      transparent 55%
+    ),
+    linear-gradient(
+      135deg,
+      #152238 0%,
+      #17263d 55%,
+      #1b2b43 100%
+    );
+}
+
+/* Very subtle technical grid */
+
+.forgemind-hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.018) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  mask-image: linear-gradient(
+    to right,
+    transparent 20%,
+    black 100%
+  );
+}
+
+/* ==========================================
+   SECTION BACKGROUNDS
+   ========================================== */
+
+.fm-section {
+  background: var(--fm-bg);
+}
+
+.fm-section-alt {
+  background: #172337;
+}
+
+.fm-section-soft {
+  background: #152035;
+}
+
+/* ==========================================
+   CARDS
+   ========================================== */
+
+.fm-card {
+  background: var(--fm-surface);
+  border: 1px solid var(--fm-border);
+  border-radius: 24px;
+
+  transition:
+    transform 0.3s ease,
+    border-color 0.3s ease,
+    background 0.3s ease;
+}
+
+.fm-card:hover {
+  background: var(--fm-surface-light);
+  border-color: rgba(79, 140, 255, 0.28);
+  transform: translateY(-4px);
+}
+
+/* ==========================================
+   TYPOGRAPHY
+   ========================================== */
+
+.fm-muted {
+  color: var(--fm-muted);
+}
+
+/* ==========================================
+   NETWORK — REFINED ANIMATION
+   ========================================== */
+
+@keyframes networkFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.forgemind-network {
+  animation: networkFloat 10s ease-in-out infinite;
+}
+
+/* ==========================================
+   ACCESSIBILITY
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .forgemind-network {
+    animation: none;
+  }
+
+  .fm-card {
+    transition: none;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 100px;
+}
+
+section[id] {
+  scroll-margin-top: 100px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
