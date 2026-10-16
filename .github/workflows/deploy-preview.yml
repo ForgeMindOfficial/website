@@ -1,0 +1,66 @@
+name: Deploy ForgeMind Preview
+
+on:
+  push:
+    branches:
+      - forgemind-v2
+
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  deploy:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Build and prerender ForgeMind
+        run: npm run build
+
+      - name: Prepare static deployment
+        run: |
+          mkdir -p .vercel/output/static
+          cp -R dist/. .vercel/output/static/
+
+          cat > .vercel/output/config.json <<'EOF'
+          {
+            "version": 3,
+            "routes": [
+              {
+                "src": "^/projects/(newsglow|staff-app|business-automation)/?$",
+                "dest": "/projects/$1/index.html"
+              },
+              {
+                "handle": "filesystem"
+              },
+              {
+                "src": "^/(.*)$",
+                "dest": "/index.html"
+              }
+            ]
+          }
+          EOF
+
+      - name: Deploy preview to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+          VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+          VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+        run: |
+          npx --yes vercel@64.3.1 deploy --prebuilt --yes --token="$VERCEL_TOKEN"
