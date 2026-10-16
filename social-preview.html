@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      width: 1200px;
+      height: 630px;
+      overflow: hidden;
+      background: #111827;
+      color: #f8fafc;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .preview {
+      position: relative;
+      width: 1200px;
+      height: 630px;
+      padding: 72px 88px;
+      overflow: hidden;
+      background:
+        radial-gradient(
+          circle at 85% 20%,
+          rgba(79, 140, 255, 0.16),
+          transparent 42%
+        ),
+        linear-gradient(135deg, #111827, #172337);
+    }
+
+    .grid {
+      position: absolute;
+      inset: 0;
+      opacity: 0.12;
+      background-image:
+        linear-gradient(
+          rgba(255,255,255,0.08) 1px,
+          transparent 1px
+        ),
+        linear-gradient(
+          90deg,
+          rgba(255,255,255,0.08) 1px,
+          transparent 1px
+        );
+      background-size: 48px 48px;
+    }
+
+    .content {
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      font-size: 44px;
+      font-weight: 900;
+      letter-spacing: -2px;
+    }
+
+    .logo span {
+      color: #4f8cff;
+    }
+
+    .eyebrow {
+      margin-top: 95px;
+      color: #4f8cff;
+      font-size: 17px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 22px 0 0;
+      max-width: 850px;
+      font-size: 67px;
+      line-height: 1.1;
+      letter-spacing: -2px;
+      font-weight: 700;
+    }
+
+    .subtitle {
+      margin-top: 24px;
+      font-size: 25px;
+      color: #aab8cc;
+    }
+
+    .footer {
+      position: absolute;
+      bottom: 65px;
+      left: 88px;
+      right: 88px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #94a3b8;
+      font-size: 18px;
+    }
+
+    .accent-line {
+      width: 72px;
+      height: 4px;
+      margin-top: 36px;
+      border-radius: 4px;
+      background: #4f8cff;
+    }
+
+    .glow {
+      position: absolute;
+      width: 420px;
+      height: 420px;
+      right: -140px;
+      bottom: -160px;
+      border-radius: 50%;
+      background: rgba(79, 140, 255, 0.14);
+      filter: blur(90px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="preview">
+    <div class="grid"></div>
+    <div class="glow"></div>
+
+    <div class="content">
+      <div class="logo">
+        FORGE<span>MIND</span>.
+      </div>
+
+      <div class="eyebrow">
+        Digital Solutions by Daniel Pieropan
+      </div>
+
+      <h1>
+        Every problem deserves<br />
+        a smart solution.
+      </h1>
+
+      <div class="accent-line"></div>
+
+      <p class="subtitle">
+        AI Automation · Web Development · Mobile Applications
+      </p>
+    </div>
+
+    <div class="footer">
+      <span>Problem → Analysis → Solution</span>
+      <span>forgemind.eu</span>
+    </div>
+  </div>
+</body>
+</html>
