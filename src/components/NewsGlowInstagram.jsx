@@ -326,19 +326,14 @@ export default function NewsGlowInstagram() {
             </div>
           </div>
 
-          {/* CONTENT TABS */}
+{/* CONTENT HEADER */}
 
-          <div className="flex items-center justify-center gap-10 border-b border-white/10 px-6 py-5">
-            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-white">
-              <Grid3X3 size={16} />
-              Posts
-            </div>
-
-            <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-slate-500">
-              <CirclePlay size={16} />
-              Stories
-            </div>
-          </div>
+<div className="flex items-center justify-center border-b border-white/10 px-6 py-5">
+  <div className="flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-white">
+    <Grid3X3 size={16} />
+    Posts
+  </div>
+</div>
 
           {/* POST GRID */}
 

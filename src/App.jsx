@@ -19,8 +19,6 @@ import PageTransition from "./components/PageTransition";
 import SEO from "./components/SEO";
 import StructuredData from "./components/StructuredData";
 
-<div className="space-y-12">
-
   {/* FEATURED PROJECTS */}
 
   <div className="grid gap-6 lg:grid-cols-2">
@@ -51,8 +49,6 @@ import StructuredData from "./components/StructuredData";
     </div>
   </div>
 
-</div>
-
 const expertise = [
   {
     icon: BrainCircuit,
@@ -79,20 +75,22 @@ const expertise = [
 
 function SectionTitle({ label, title, description }) {
   return (
-    <div className="mb-14">
-      <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-blue-400">
+    <div className="mb-10 md:mb-12">
+
+      <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-blue-400">
         {label}
       </p>
 
-      <h2 className="max-w-3xl text-4xl font-semibold tracking-tight md:text-6xl">
+      <h2 className="max-w-4xl text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
         {title}
       </h2>
 
       {description && (
-        <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-400">
+        <p className="mt-5 max-w-2xl text-base leading-relaxed text-slate-400 md:text-lg">
           {description}
         </p>
       )}
+
     </div>
   );
 }
@@ -115,7 +113,7 @@ function HomePage() {
 
       {/* HERO */}
 
-      <section className="forgemind-hero relative flex min-h-screen items-center overflow-hidden px-6 pt-32 md:px-10">
+      <section className="forgemind-hero relative flex min-h-[85svh] items-center overflow-hidden px-6 py-20 md:min-h-[90svh] md:px-10">
 
         <SolutionNetwork />
 
@@ -131,7 +129,7 @@ function HomePage() {
               INDEPENDENT DIGITAL SOLUTIONS STUDIO
             </div>
 
-            <h1 className="max-w-4xl text-5xl font-semibold leading-[1.08] tracking-[-0.055em] md:text-7xl xl:max-w-3xl">
+            <h1 className="max-w-4xl text-4xl font-semibold leading-[1.1] tracking-[-0.045em] sm:text-5xl lg:text-6xl xl:max-w-3xl">
               Every problem
               <br />
               deserves a
@@ -141,12 +139,12 @@ function HomePage() {
               </span>
             </h1>
 
-            <p className="mt-9 max-w-xl text-lg leading-relaxed text-slate-400 md:text-xl">
+            <p className="mt-7 max-w-xl text-base leading-relaxed text-slate-400 md:text-lg">
               Transforming complex challenges into practical digital solutions
               through software, automation and artificial intelligence.
             </p>
 
-            <div className="mt-11 flex flex-wrap gap-4">
+            <div className="mt-8 flex flex-wrap gap-4">
 
               <a
                 href="#work"
@@ -164,7 +162,7 @@ function HomePage() {
 
             </div>
 
-            <p className="mt-20 text-xs uppercase tracking-[0.3em] text-slate-500">
+            <p className="mt-12 text-xs uppercase tracking-[0.3em] text-slate-500">
               Digital Solutions by Daniel Pieropan
             </p>
 
@@ -174,7 +172,7 @@ function HomePage() {
 
       {/* EXPERTISE */}
 
-      <section id="expertise" className="fm-section-alt border-t border-white/10 px-6 py-28 md:px-10">
+      <section id="expertise" className="fm-section-alt border-t border-white/10 px-6 py-16 md:px-10 md:py-20">
 
         <div className="mx-auto max-w-7xl">
 
@@ -193,14 +191,14 @@ function HomePage() {
                 <motion.div
                   key={item.number}
                   whileHover={{ y: -8 }}
-                  className="group rounded-3xl border border-white/10 bg-[#1E2D43] p-9 transition hover:border-blue-400/30"
+                  className="group rounded-2xl border border-white/10 bg-[#1E2D43] p-7 transition hover:border-blue-400/30"
                 >
-                  <div className="mb-16 flex items-center justify-between">
+                  <div className="mb-10 flex items-center justify-between">
                     <Icon size={30} className="text-blue-400" />
                     <span className="text-sm text-slate-600">{item.number}</span>
                   </div>
 
-                  <h3 className="mb-4 text-2xl font-semibold">
+                  <h3 className="mb-3 text-xl font-semibold">
                     {item.title}
                   </h3>
 
@@ -221,7 +219,7 @@ function HomePage() {
 
 <section
   id="work"
-  className="fm-section px-6 py-28 md:px-10"
+  className="fm-section px-6 py-16 md:px-10 md:py-20"
 >
   <div className="mx-auto max-w-7xl">
 
@@ -245,7 +243,7 @@ function HomePage() {
 
       {/* APPROACH */}
 
-      <section id="approach" className="fm-section-soft border-y border-white/10 px-6 py-28 md:px-10">
+      <section id="approach" className="fm-section-soft border-y border-white/10 px-6 py-16 md:px-10 md:py-20">
 
         <div className="mx-auto max-w-7xl">
 
@@ -286,7 +284,7 @@ function HomePage() {
 
       {/* ABOUT */}
 
-      <section id="about" className="fm-section px-6 py-28 md:px-10">
+      <section id="about" className="fm-section px-6 py-16 md:px-10 md:py-20">
 
         <div className="mx-auto grid max-w-7xl gap-16 md:grid-cols-2">
 
@@ -295,14 +293,14 @@ function HomePage() {
               BEHIND FORGEMIND
             </p>
 
-            <h2 className="text-4xl font-semibold tracking-tight md:text-6xl">
+            <h2 className="text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
               A creative mind.
               <br />
               A practical approach.
             </h2>
           </div>
 
-          <div className="space-y-6 text-lg leading-relaxed text-slate-400">
+          <div className="space-y-5 text-base leading-relaxed text-slate-400 md:text-lg">
 
             <p>
               I'm Daniel Pieropan, the developer and creative mind behind ForgeMind.
@@ -327,19 +325,19 @@ function HomePage() {
 
       <section id="contact" className="fm-section px-6 pb-24 pt-20 md:px-10">
 
-        <div className="mx-auto max-w-7xl rounded-[2rem] border border-blue-400/20 bg-gradient-to-br from-[#203858] to-[#1A2940] p-10 md:p-20">
+        <div className="mx-auto max-w-7xl rounded-[2rem] border border-blue-400/20 bg-gradient-to-br from-[#203858] to-[#1A2940] p-8 md:p-12">
 
           <p className="mb-7 text-xs font-semibold uppercase tracking-[0.3em] text-blue-300">
             HAVE AN IDEA?
           </p>
 
-          <h2 className="max-w-4xl text-5xl font-semibold tracking-tight md:text-7xl">
+          <h2 className="max-w-4xl text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
             Let's turn it into something real.
           </h2>
 
           <a
             href="mailto:info@forgemind.eu"
-            className="mt-12 inline-flex items-center gap-3 rounded-full bg-white px-7 py-4 font-semibold text-[#090D14] transition hover:bg-blue-100"
+            className="mt-8 inline-flex items-center gap-3 rounded-full bg-white px-6 py-3.5 text-sm font-semibold text-[#090D14] transition hover:bg-blue-100"
           >
             Get in Touch <ArrowUpRight size={18} />
           </a>

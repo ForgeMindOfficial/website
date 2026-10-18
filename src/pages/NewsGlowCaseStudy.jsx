@@ -1,5 +1,11 @@
 import { motion } from "motion/react";
-import { ArrowLeft } from "lucide-react";
+import {
+  ArrowLeft,
+  BrainCircuit,
+  LayoutDashboard,
+  Send,
+  Globe2,
+} from "lucide-react";
 import Navbar from "../components/Navbar";
 import SEO from "../components/SEO";
 import NewsGlowArchitecture from "../components/NewsGlowArchitecture";
@@ -153,119 +159,6 @@ export default function NewsGlowCaseStudy() {
 
 <NewsGlowArchitecture />
 
-{/* INSTAGRAM STORY SHOWCASE */}
-
-<section className="bg-[#111827] px-6 py-16 md:px-10">
-  <div className="mx-auto max-w-7xl">
-
-    {/* Heading */}
-
-    <div className="mb-10">
-
-      <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-amber-400">
-        SOCIAL MEDIA AUTOMATION
-      </p>
-
-      <h2 className="text-4xl font-semibold tracking-tight md:text-6xl">
-        Automated content.
-        <br />
-        Human control.
-      </h2>
-
-      <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-400">
-        NewsGlow transforms selected news into branded Instagram Stories,
-        combining automated content creation with editorial review
-        and controlled publishing.
-      </p>
-
-    </div>
-
-    {/* Showcase */}
-
-    <div className="grid items-start gap-8 lg:grid-cols-[0.8fr_1.2fr]">
-
-      {/* Story Preview */}
-
-      <div className="flex justify-center">
-
-        <div className="w-full max-w-[300px] overflow-hidden rounded-[28px] border border-white/10 bg-[#0B1B2B] p-3 shadow-2xl">
-
-          <div className="mb-3 flex items-center justify-between px-3 py-2">
-
-            <span className="text-xs font-semibold text-white">
-              Instagram Story
-            </span>
-
-            <span className="rounded-full bg-amber-400/10 px-3 py-1 text-[10px] text-amber-400">
-              9:16
-            </span>
-
-          </div>
-
-          <img
-            src="/images/projects/newsglow/story-preview.png"
-            alt="NewsGlow Instagram Story about renewable energy"
-            className="block h-auto w-full rounded-xl"
-            loading="lazy"
-          />
-
-        </div>
-
-      </div>
-
-      {/* Editorial Approval */}
-
-      <div>
-
-        <div className="mb-8">
-
-          <span className="mb-4 inline-block rounded-full border border-green-400/20 bg-green-400/10 px-4 py-2 text-xs text-green-400">
-            Human-in-the-loop
-          </span>
-
-          <h3 className="mb-4 text-3xl font-semibold">
-            Automated creation.
-            <br />
-            Human approval.
-          </h3>
-
-          <p className="leading-relaxed text-slate-400">
-            Stories are prepared automatically and presented inside
-            the editorial workspace, where content can be reviewed
-            before publication.
-          </p>
-
-        </div>
-
-        <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0B1B2B]">
-
-          <div className="flex items-center gap-2 border-b border-white/10 px-5 py-4">
-
-            <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
-            <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
-            <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
-
-            <span className="ml-3 text-xs text-slate-400">
-              Editorial Approval
-            </span>
-
-          </div>
-
-          <img
-            src="/images/projects/newsglow/story-approval.png"
-            alt="NewsGlow editorial approval interface"
-            className="block h-auto w-full"
-            loading="lazy"
-          />
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
-</section>
 
 {/* INSTAGRAM PROFILE EXPERIENCE */}
 
@@ -418,33 +311,194 @@ export default function NewsGlowCaseStudy() {
         </div>
       </section>
 
-      {/* RESULT */}
+{/* RESULT */}
 
-      <section className="bg-[#172337] px-6 py-28 md:px-10">
+<section className="relative overflow-hidden bg-[#172337] px-6 py-28 md:px-10">
 
-        <div className="mx-auto max-w-7xl">
+  {/* Background Glow */}
 
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-amber-400">
-            THE OUTCOME
-          </p>
+  <div className="pointer-events-none absolute right-0 top-0 h-[450px] w-[450px] rounded-full bg-amber-400/5 blur-[130px]" />
 
-          <h2 className="max-w-3xl text-4xl font-semibold tracking-tight md:text-6xl">
-            From an idea to a working system.
-          </h2>
+  <div className="relative mx-auto max-w-7xl">
 
-          <p className="mt-8 max-w-3xl text-lg leading-relaxed text-slate-300">
-            NewsGlow demonstrates how AI, automation, data management and
-            external APIs can work together in a practical editorial
-            application.
-          </p>
+    {/* Heading */}
 
-          <p className="mt-5 max-w-3xl leading-relaxed text-slate-400">
-            The project continues to evolve, with a focus on improving
-            verification reliability, publishing workflows and scalability.
-          </p>
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="mb-16"
+    >
 
+      <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-amber-400">
+        THE OUTCOME
+      </p>
+
+      <h2 className="max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl">
+        More than automation.
+        <br />
+        <span className="text-slate-400">
+          A connected digital product.
+        </span>
+      </h2>
+
+      <p className="mt-8 max-w-3xl text-lg leading-relaxed text-slate-400">
+        NewsGlow brings together AI, workflow automation,
+        application development and social media publishing
+        into one connected platform.
+      </p>
+
+    </motion.div>
+
+    {/* CAPABILITIES GRID */}
+
+    <div className="grid gap-5 md:grid-cols-2">
+
+      {/* AI Editorial Pipeline */}
+
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}
+        whileHover={{ y: -5 }}
+        className="group rounded-3xl border border-white/10 bg-[#1E2D43] p-8 transition-colors hover:border-amber-400/30 md:p-10"
+      >
+
+        <div className="mb-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-amber-400/10">
+          <BrainCircuit size={27} className="text-amber-400" />
         </div>
-      </section>
+
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-amber-400">
+          01 / AI & Automation
+        </p>
+
+        <h3 className="mb-4 text-2xl font-semibold">
+          AI Editorial Pipeline
+        </h3>
+
+        <p className="leading-relaxed text-slate-400">
+          Automated news discovery, AI-assisted editorial selection,
+          source verification and content preparation.
+        </p>
+
+      </motion.div>
+
+      {/* Management Platform */}
+
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+        whileHover={{ y: -5 }}
+        className="group rounded-3xl border border-white/10 bg-[#1E2D43] p-8 transition-colors hover:border-blue-400/30 md:p-10"
+      >
+
+        <div className="mb-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-400/10">
+          <LayoutDashboard size={27} className="text-blue-400" />
+        </div>
+
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">
+          02 / Application Development
+        </p>
+
+        <h3 className="mb-4 text-2xl font-semibold">
+          Custom Management Platform
+        </h3>
+
+        <p className="leading-relaxed text-slate-400">
+          A React-based editorial workspace connected to Supabase
+          for content review, approval and publication management.
+        </p>
+
+      </motion.div>
+
+      {/* Publishing */}
+
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.15 }}
+        whileHover={{ y: -5 }}
+        className="group rounded-3xl border border-white/10 bg-[#1E2D43] p-8 transition-colors hover:border-emerald-400/30 md:p-10"
+      >
+
+        <div className="mb-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-emerald-400/10">
+          <Send size={27} className="text-emerald-400" />
+        </div>
+
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-emerald-400">
+          03 / API Integration
+        </p>
+
+        <h3 className="mb-4 text-2xl font-semibold">
+          Automated Publishing
+        </h3>
+
+        <p className="leading-relaxed text-slate-400">
+          Dedicated publishing workflows connect approved
+          content to Instagram Carousels and Stories.
+        </p>
+
+      </motion.div>
+
+      {/* Scalability */}
+
+      <motion.div
+        initial={{ opacity: 0, y: 25 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.2 }}
+        whileHover={{ y: -5 }}
+        className="group rounded-3xl border border-white/10 bg-[#1E2D43] p-8 transition-colors hover:border-purple-400/30 md:p-10"
+      >
+
+        <div className="mb-10 flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-400/10">
+          <Globe2 size={27} className="text-purple-400" />
+        </div>
+
+        <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-purple-400">
+          04 / System Architecture
+        </p>
+
+        <h3 className="mb-4 text-2xl font-semibold">
+          Scalable Foundation
+        </h3>
+
+        <p className="leading-relaxed text-slate-400">
+          Modular workflows, structured data and reusable
+          components designed to support future countries
+          and languages.
+        </p>
+
+      </motion.div>
+
+    </div>
+
+    {/* Closing Statement */}
+
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6 }}
+      className="mt-14 border-t border-white/10 pt-10"
+    >
+
+      <p className="max-w-3xl text-lg leading-relaxed text-slate-300">
+        NewsGlow is an evolving project that demonstrates how
+        different technologies can be combined to solve
+        real-world challenges through practical software.
+      </p>
+
+    </motion.div>
+
+  </div>
+
+</section>
 
       {/* FOOTER */}
 

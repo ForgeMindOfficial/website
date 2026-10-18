@@ -35,60 +35,69 @@ const projectVisuals = {
   },
 };
 
-export default function ProjectCard({ project }) {
-  const Icon = projectIcons[project.id] || BrainCircuit;
-  const visual = projectVisuals[project.id];
-
-  const availableCaseStudies = [
+const availableCaseStudies = [
   "newsglow",
   "staff-app",
   "business-automation",
 ];
+
+export default function ProjectCard({ project }) {
+  const Icon = projectIcons[project.id] || BrainCircuit;
+
+  const visual = projectVisuals[project.id] || {
+    label: "DIGITAL PROJECT",
+    detail: "Explore → Build → Improve",
+  };
+
   const hasCaseStudy = availableCaseStudies.includes(project.id);
 
   return (
     <motion.article
       whileHover={{ y: -4 }}
       transition={{ duration: 0.25 }}
-      className="group overflow-hidden rounded-3xl border border-white/10 bg-[#1B2940] transition-colors hover:border-blue-400/30"
+      className="group flex h-full flex-col overflow-hidden rounded-2xl border border-white/10 bg-[#1B2940] transition-colors hover:border-blue-400/30"
     >
       {/* VISUAL HEADER */}
 
       <div
-        className="relative flex h-52 flex-col justify-between overflow-hidden border-b border-white/10 p-8"
+        className="relative flex h-40 flex-col justify-between overflow-hidden border-b border-white/10 p-6 md:h-44 md:p-7"
         style={{
           background: `linear-gradient(135deg, #1E2D43 0%, ${project.color}18 100%)`,
         }}
       >
-        <div className="flex items-center justify-between">
-          <span className="text-xs font-semibold tracking-[0.2em] text-slate-300">
+        {/* HEADER LABEL */}
+
+        <div className="flex items-center justify-between gap-4">
+          <span className="text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-300">
             {visual.label}
           </span>
 
           <span
-            className="text-sm font-semibold"
+            className="text-xs font-semibold"
             style={{ color: project.color }}
           >
             {project.number}
           </span>
         </div>
 
-        <div className="flex items-center gap-5">
+        {/* VISUAL CONTENT */}
+
+        <div className="flex items-center gap-4">
           <div
-            className="flex h-20 w-20 shrink-0 items-center justify-center rounded-2xl border"
+            className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl border md:h-16 md:w-16"
             style={{
               borderColor: `${project.color}50`,
               backgroundColor: `${project.color}12`,
             }}
           >
             <Icon
-              size={36}
-              strokeWidth={1.4}
+              size={28}
+              strokeWidth={1.5}
               style={{ color: project.color }}
             />
           </div>
 
-          <p className="text-lg font-medium tracking-tight text-slate-200 md:text-xl">
+          <p className="min-w-0 text-base font-medium leading-snug tracking-tight text-slate-200 md:text-lg">
             {visual.detail}
           </p>
         </div>
@@ -96,30 +105,42 @@ export default function ProjectCard({ project }) {
 
       {/* CONTENT */}
 
-      <div className="p-8 md:p-10">
-        <p className="mb-4 text-xs font-semibold uppercase tracking-[0.15em] text-slate-400">
+      <div className="flex flex-1 flex-col p-6 md:p-8">
+
+        {/* PROJECT CATEGORY */}
+
+        <p className="mb-3 text-[11px] font-semibold uppercase tracking-[0.16em] text-slate-400">
           {project.category}
         </p>
 
-        <h3 className="text-3xl font-semibold tracking-tight">
+        {/* PROJECT NAME */}
+
+        <h3 className="text-2xl font-semibold tracking-tight text-white md:text-[28px]">
           {project.name}
         </h3>
 
+        {/* TAGLINE */}
+
         <p
-          className="mt-3 text-sm font-medium"
+          className="mt-2 text-sm font-medium leading-relaxed"
           style={{ color: project.color }}
         >
           {project.tagline}
         </p>
 
-        <p className="mt-6 min-h-20 leading-relaxed text-slate-300">
+        {/* DESCRIPTION */}
+
+        <p className="mt-4 text-sm leading-relaxed text-slate-300 md:text-[15px]">
           {project.description}
         </p>
 
         {/* PROBLEM → SOLUTION */}
 
-        <div className="mt-8 rounded-2xl border border-white/10 bg-[#172337] p-5">
-          <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">
+        <div className="mt-6 rounded-xl border border-white/10 bg-[#172337] p-4 md:p-5">
+
+          {/* CHALLENGE */}
+
+          <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-slate-400">
             The Challenge
           </p>
 
@@ -127,12 +148,16 @@ export default function ProjectCard({ project }) {
             {project.problem}
           </p>
 
-          <div className="my-4 flex items-center gap-3">
-            <div className="h-px w-8 bg-blue-400/50" />
-            <ArrowRight size={16} className="text-blue-400" />
+          {/* TRANSITION */}
+
+          <div className="my-3 flex items-center gap-2">
+            <div className="h-px w-6 bg-blue-400/40" />
+            <ArrowRight size={15} className="text-blue-400" />
           </div>
 
-          <p className="text-xs font-semibold uppercase tracking-widest text-blue-400">
+          {/* SOLUTION */}
+
+          <p className="text-[11px] font-semibold uppercase tracking-[0.15em] text-blue-400">
             The Solution
           </p>
 
@@ -143,11 +168,11 @@ export default function ProjectCard({ project }) {
 
         {/* TECHNOLOGIES */}
 
-        <div className="mt-7 flex flex-wrap gap-2">
+        <div className="mt-5 flex flex-wrap gap-2">
           {project.technologies.slice(0, 4).map((technology) => (
             <span
               key={technology}
-              className="rounded-full border border-white/10 px-3 py-1.5 text-xs text-slate-400"
+              className="rounded-full border border-white/10 bg-white/[0.02] px-3 py-1.5 text-[11px] text-slate-400"
             >
               {technology}
             </span>
@@ -156,21 +181,30 @@ export default function ProjectCard({ project }) {
 
         {/* LINK */}
 
-        <div className="mt-9 border-t border-white/10 pt-7">
-          {hasCaseStudy ? (
-            <Link
-              to={`/projects/${project.id}`}
-              className="inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-blue-400"
-            >
-              Explore Case Study
-              <ArrowUpRight size={17} />
-            </Link>
-          ) : (
-            <span className="text-sm text-slate-500">
-              Case Study Coming Soon
-            </span>
-          )}
+        <div className="mt-auto pt-6">
+
+          <div className="border-t border-white/10 pt-5">
+            {hasCaseStudy ? (
+              <Link
+                to={`/projects/${project.id}`}
+                className="inline-flex items-center gap-2 text-sm font-semibold text-white transition-colors hover:text-blue-400"
+              >
+                Explore Case Study
+
+                <ArrowUpRight
+                  size={16}
+                  className="transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
+                />
+              </Link>
+            ) : (
+              <span className="text-sm text-slate-500">
+                Case Study Coming Soon
+              </span>
+            )}
+          </div>
+
         </div>
+
       </div>
     </motion.article>
   );
