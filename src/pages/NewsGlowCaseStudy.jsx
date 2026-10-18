@@ -1,72 +1,20 @@
 import { motion } from "motion/react";
-import {
-  ArrowLeft,
-  ArrowUpRight,
-  ArrowRight,
-  BrainCircuit,
-  Database,
-  Workflow,
-  ShieldCheck,
-  Share2,
-  Lightbulb,
-} from "lucide-react";
-import { Link } from "react-router-dom";
+import { ArrowLeft } from "lucide-react";
 import Navbar from "../components/Navbar";
 import SEO from "../components/SEO";
+import NewsGlowArchitecture from "../components/NewsGlowArchitecture";
+import NewsGlowInstagram from "../components/NewsGlowInstagram";
 
 const technologies = [
   "n8n",
   "Supabase",
   "JavaScript",
   "Node.js",
+  "React",
+  "Typescript",
   "Docker",
   "REST APIs",
   "AI Integration",
-];
-
-const workflow = [
-  {
-    number: "01",
-    title: "News Discovery",
-    description:
-      "Collecting potential stories from multiple news sources using automated RSS feeds.",
-    icon: Workflow,
-  },
-  {
-    number: "02",
-    title: "AI Editorial Selection",
-    description:
-      "Evaluating relevance, positivity, impact and uniqueness to identify promising stories.",
-    icon: BrainCircuit,
-  },
-  {
-    number: "03",
-    title: "Source Verification",
-    description:
-      "Checking source consistency, extracting article content and reducing duplicate coverage.",
-    icon: ShieldCheck,
-  },
-  {
-    number: "04",
-    title: "Content Management",
-    description:
-      "Storing editorial information, verification results and generated assets in Supabase.",
-    icon: Database,
-  },
-  {
-    number: "05",
-    title: "Content Creation",
-    description:
-      "Preparing structured content and visual assets for social media publication.",
-    icon: Lightbulb,
-  },
-  {
-    number: "06",
-    title: "Publishing",
-    description:
-      "Connecting approved content to social media publishing workflows.",
-    icon: Share2,
-  },
 ];
 
 export default function NewsGlowCaseStudy() {
@@ -128,6 +76,200 @@ export default function NewsGlowCaseStudy() {
 
         </div>
       </section>
+
+      {/* PRODUCT HERO SHOWCASE */}
+
+<section className="relative overflow-hidden bg-[#111827] px-6 pb-24 pt-8 md:px-10">
+
+  <div className="pointer-events-none absolute left-1/2 top-1/3 h-[400px] w-[700px] -translate-x-1/2 rounded-full bg-amber-400/10 blur-[140px]" />
+
+  <div className="relative mx-auto max-w-7xl">
+
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
+
+      <div className="mb-8 flex flex-wrap items-center justify-between gap-4">
+
+        <div>
+          <p className="mb-2 text-xs font-semibold uppercase tracking-[0.25em] text-amber-400">
+            THE PRODUCT
+          </p>
+
+          <h2 className="text-2xl font-semibold md:text-3xl">
+            NewsGlow Editorial Workspace
+          </h2>
+        </div>
+
+        <span className="rounded-full border border-emerald-400/20 bg-emerald-400/10 px-4 py-2 text-xs font-medium text-emerald-300">
+          ● Operational Platform
+        </span>
+
+      </div>
+
+      {/* Browser Window */}
+
+      <div className="overflow-hidden rounded-2xl border border-white/15 bg-[#0B1B2B] shadow-[0_40px_100px_rgba(0,0,0,0.45)]">
+
+        {/* Browser Header */}
+
+        <div className="flex h-12 items-center gap-2 border-b border-white/10 bg-[#162235] px-5">
+
+          <span className="h-3 w-3 rounded-full bg-[#FF5F57]" />
+          <span className="h-3 w-3 rounded-full bg-[#FEBC2E]" />
+          <span className="h-3 w-3 rounded-full bg-[#28C840]" />
+
+          <div className="mx-auto hidden rounded-md border border-white/10 bg-[#0B1B2B] px-8 py-1 text-xs text-slate-400 sm:block">
+            NewsGlow / Editorial Workspace
+          </div>
+
+        </div>
+
+        {/* Real Dashboard Screenshot */}
+
+        <img
+          src="/images/projects/newsglow/dashboard.png"
+          alt="NewsGlow editorial dashboard showing content management, published posts and editorial statistics"
+          className="block h-auto w-full"
+          loading="lazy"
+        />
+
+      </div>
+
+      <p className="mt-6 text-center text-sm text-slate-400">
+        Custom-built editorial dashboard for content review, management and publishing.
+      </p>
+
+    </motion.div>
+
+  </div>
+
+</section>
+
+{/* NEWSGLOW AUTOMATION ARCHITECTURE */}
+
+<NewsGlowArchitecture />
+
+{/* INSTAGRAM STORY SHOWCASE */}
+
+<section className="bg-[#111827] px-6 py-16 md:px-10">
+  <div className="mx-auto max-w-7xl">
+
+    {/* Heading */}
+
+    <div className="mb-10">
+
+      <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-amber-400">
+        SOCIAL MEDIA AUTOMATION
+      </p>
+
+      <h2 className="text-4xl font-semibold tracking-tight md:text-6xl">
+        Automated content.
+        <br />
+        Human control.
+      </h2>
+
+      <p className="mt-6 max-w-2xl text-lg leading-relaxed text-slate-400">
+        NewsGlow transforms selected news into branded Instagram Stories,
+        combining automated content creation with editorial review
+        and controlled publishing.
+      </p>
+
+    </div>
+
+    {/* Showcase */}
+
+    <div className="grid items-start gap-8 lg:grid-cols-[0.8fr_1.2fr]">
+
+      {/* Story Preview */}
+
+      <div className="flex justify-center">
+
+        <div className="w-full max-w-[300px] overflow-hidden rounded-[28px] border border-white/10 bg-[#0B1B2B] p-3 shadow-2xl">
+
+          <div className="mb-3 flex items-center justify-between px-3 py-2">
+
+            <span className="text-xs font-semibold text-white">
+              Instagram Story
+            </span>
+
+            <span className="rounded-full bg-amber-400/10 px-3 py-1 text-[10px] text-amber-400">
+              9:16
+            </span>
+
+          </div>
+
+          <img
+            src="/images/projects/newsglow/story-preview.png"
+            alt="NewsGlow Instagram Story about renewable energy"
+            className="block h-auto w-full rounded-xl"
+            loading="lazy"
+          />
+
+        </div>
+
+      </div>
+
+      {/* Editorial Approval */}
+
+      <div>
+
+        <div className="mb-8">
+
+          <span className="mb-4 inline-block rounded-full border border-green-400/20 bg-green-400/10 px-4 py-2 text-xs text-green-400">
+            Human-in-the-loop
+          </span>
+
+          <h3 className="mb-4 text-3xl font-semibold">
+            Automated creation.
+            <br />
+            Human approval.
+          </h3>
+
+          <p className="leading-relaxed text-slate-400">
+            Stories are prepared automatically and presented inside
+            the editorial workspace, where content can be reviewed
+            before publication.
+          </p>
+
+        </div>
+
+        <div className="overflow-hidden rounded-2xl border border-white/10 bg-[#0B1B2B]">
+
+          <div className="flex items-center gap-2 border-b border-white/10 px-5 py-4">
+
+            <span className="h-2.5 w-2.5 rounded-full bg-red-400" />
+            <span className="h-2.5 w-2.5 rounded-full bg-amber-400" />
+            <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
+
+            <span className="ml-3 text-xs text-slate-400">
+              Editorial Approval
+            </span>
+
+          </div>
+
+          <img
+            src="/images/projects/newsglow/story-approval.png"
+            alt="NewsGlow editorial approval interface"
+            className="block h-auto w-full"
+            loading="lazy"
+          />
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+{/* INSTAGRAM PROFILE EXPERIENCE */}
+
+<NewsGlowInstagram />
 
       {/* PROBLEM & SOLUTION */}
 
@@ -194,61 +336,6 @@ export default function NewsGlowCaseStudy() {
               </p>
 
             </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      {/* ARCHITECTURE */}
-
-      <section className="bg-[#172337] px-6 py-28 md:px-10">
-
-        <div className="mx-auto max-w-7xl">
-
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-amber-400">
-            BEHIND THE BUILD
-          </p>
-
-          <h2 className="mb-6 text-4xl font-semibold tracking-tight md:text-6xl">
-            How NewsGlow works.
-          </h2>
-
-          <p className="mb-16 max-w-2xl text-lg leading-relaxed text-slate-400">
-            A modular workflow connects discovery, editorial intelligence,
-            verification, data management and content production.
-          </p>
-
-          <div className="grid gap-5 md:grid-cols-3">
-
-            {workflow.map((step) => {
-              const Icon = step.icon;
-
-              return (
-                <div
-                  key={step.number}
-                  className="rounded-3xl border border-white/10 bg-[#1E2D43] p-8"
-                >
-
-                  <div className="mb-12 flex items-center justify-between">
-                    <Icon size={27} className="text-amber-400" />
-
-                    <span className="text-sm text-slate-500">
-                      {step.number}
-                    </span>
-                  </div>
-
-                  <h3 className="mb-4 text-xl font-semibold">
-                    {step.title}
-                  </h3>
-
-                  <p className="text-sm leading-relaxed text-slate-400">
-                    {step.description}
-                  </p>
-
-                </div>
-              );
-            })}
 
           </div>
 
