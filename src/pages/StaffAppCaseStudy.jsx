@@ -1,20 +1,19 @@
 import { motion } from "motion/react";
 import {
   ArrowLeft,
-  ArrowRight,
   Smartphone,
   Database,
   Bell,
   ShieldCheck,
   Layers3,
-  RefreshCw,
   Users,
-  Code2,
   CheckCircle2,
+  GraduationCap,
 } from "lucide-react";
-import { Link } from "react-router-dom";
 import Navbar from "../components/Navbar";
 import SEO from "../components/SEO";
+import StaffAppShowcase from "../components/StaffAppShowcase";
+import StaffAppArchitecture from "../components/StaffAppArchitecture";
 
 const technologies = [
   "React",
@@ -63,13 +62,13 @@ const features = [
     description:
       "A shared React application is packaged for Android and iOS using Capacitor and native development tools.",
   },
-  {
-    number: "06",
-    icon: Layers3,
-    title: "Modular Architecture",
-    description:
-      "Reusable components and integrated services provide a foundation for expanding the application.",
-  },
+{
+  number: "06",
+  icon: GraduationCap,
+  title: "Internal Academy",
+  description:
+    "A dedicated knowledge platform for training resources, barber skills, service standards and product information.",
+},
 ];
 
 const challenges = [
@@ -122,7 +121,7 @@ export default function StaffAppCaseStudy() {
 
       {/* HERO */}
 
-      <section className="relative overflow-hidden border-b border-white/10 bg-[#172337] px-6 py-24 md:px-10 md:py-28">
+      <section className="relative overflow-hidden border-b border-white/10 bg-[#172337] px-6 py-16 md:px-10 md:py-20">
 
         <div className="pointer-events-none absolute right-0 top-0 h-96 w-96 rounded-full bg-blue-400/10 blur-[120px]" />
 
@@ -138,17 +137,17 @@ export default function StaffAppCaseStudy() {
               CASE STUDY 02 / MOBILE APPLICATION
             </p>
 
-            <h1 className="max-w-5xl text-5xl font-semibold tracking-tight md:text-7xl">
+            <h1 className="max-w-5xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
               Barber House
               <br />
               <span className="text-blue-400">Staff App.</span>
             </h1>
 
-            <p className="mt-7 max-w-2xl text-2xl text-slate-300 md:text-3xl">
+            <p className="mt-5 max-w-2xl text-xl text-slate-300 md:text-2xl">
               Connecting people and processes.
             </p>
 
-            <p className="mt-8 max-w-3xl text-lg leading-relaxed text-slate-400">
+            <p className="mt-6 max-w-3xl text-base leading-relaxed text-slate-400 md:text-lg">
               A cross-platform employee application designed to centralize
               internal tools, simplify communication and improve everyday
               operational workflows.
@@ -183,9 +182,13 @@ export default function StaffAppCaseStudy() {
         </div>
       </section>
 
+      {/* APP SHOWCASE */}
+
+<StaffAppShowcase />
+
       {/* PROJECT OVERVIEW */}
 
-      <section className="px-6 py-24 md:px-10 md:py-28">
+      <section className="px-6 py-16 md:px-10 md:py-20">
 
         <div className="mx-auto max-w-7xl">
 
@@ -193,7 +196,7 @@ export default function StaffAppCaseStudy() {
             THE CHALLENGE
           </p>
 
-          <h2 className="mb-14 max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl">
+          <h2 className="mb-14 max-w-4xl text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
             Better internal tools.
             <br />
             Better everyday workflows.
@@ -201,13 +204,13 @@ export default function StaffAppCaseStudy() {
 
           <div className="grid gap-6 md:grid-cols-2">
 
-            <div className="rounded-3xl border border-white/10 bg-[#1B2940] p-8 md:p-10">
+            <div className="rounded-3xl border border-white/10 bg-[#1B2940] p-6 md:p-8">
 
-              <p className="mb-7 text-xs font-semibold uppercase tracking-widest text-slate-400">
+              <p className="mb-5 text-xs font-semibold uppercase tracking-widest text-slate-400">
                 01 / The Problem
               </p>
 
-              <h3 className="mb-6 text-2xl font-semibold">
+              <h3 className="mb-4 text-2xl font-semibold">
                 Information spread across different systems.
               </h3>
 
@@ -216,7 +219,7 @@ export default function StaffAppCaseStudy() {
                 internal resources and operational tools.
               </p>
 
-              <p className="mt-5 leading-relaxed text-slate-400">
+              <p className="mt-4 leading-relaxed text-slate-400">
                 When these resources are distributed across multiple
                 systems, everyday processes become less convenient and
                 communication can become fragmented.
@@ -224,13 +227,13 @@ export default function StaffAppCaseStudy() {
 
             </div>
 
-            <div className="rounded-3xl border border-blue-400/20 bg-[#1B2940] p-8 md:p-10">
+            <div className="rounded-3xl border border-blue-400/20 bg-[#1B2940] p-6 md:p-8">
 
-              <p className="mb-7 text-xs font-semibold uppercase tracking-widest text-blue-400">
+              <p className="mb-5 text-xs font-semibold uppercase tracking-widest text-blue-400">
                 02 / The Solution
               </p>
 
-              <h3 className="mb-6 text-2xl font-semibold">
+              <h3 className="mb-4 text-2xl font-semibold">
                 One application connecting essential tools.
               </h3>
 
@@ -239,7 +242,7 @@ export default function StaffAppCaseStudy() {
                 together in a single mobile experience.
               </p>
 
-              <p className="mt-5 leading-relaxed text-slate-400">
+              <p className="mt-4 leading-relaxed text-slate-400">
                 Built with React, Capacitor and Supabase, the application
                 combines a modern user interface with cloud services
                 and native mobile capabilities.
@@ -254,7 +257,7 @@ export default function StaffAppCaseStudy() {
 
       {/* FEATURES */}
 
-      <section className="bg-[#172337] px-6 py-24 md:px-10 md:py-28">
+      <section className="bg-[#172337] px-6 py-16 md:px-10 md:py-20">
 
         <div className="mx-auto max-w-7xl">
 
@@ -262,7 +265,7 @@ export default function StaffAppCaseStudy() {
             APPLICATION CAPABILITIES
           </p>
 
-          <h2 className="mb-6 text-4xl font-semibold tracking-tight md:text-6xl">
+          <h2 className="mb-6 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
             Built for real-world use.
           </h2>
 
@@ -279,10 +282,10 @@ export default function StaffAppCaseStudy() {
               return (
                 <div
                   key={feature.number}
-                  className="rounded-3xl border border-white/10 bg-[#1E2D43] p-8"
+                  className="rounded-2xl border border-white/10 bg-[#1E2D43] p-6 md:p-7"
                 >
 
-                  <div className="mb-12 flex items-center justify-between">
+                  <div className="mb-8 flex items-center justify-between">
                     <Icon size={28} className="text-blue-400" />
 
                     <span className="text-sm text-slate-500">
@@ -309,93 +312,11 @@ export default function StaffAppCaseStudy() {
 
       {/* TECHNICAL ARCHITECTURE */}
 
-      <section className="px-6 py-24 md:px-10 md:py-28">
-
-        <div className="mx-auto max-w-7xl">
-
-          <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-blue-400">
-            TECHNICAL ARCHITECTURE
-          </p>
-
-          <h2 className="mb-6 text-4xl font-semibold tracking-tight md:text-6xl">
-            One codebase.
-            <br />
-            Multiple platforms.
-          </h2>
-
-          <p className="mb-14 max-w-3xl text-lg leading-relaxed text-slate-400">
-            The application combines a React frontend, cloud-based
-            backend services and native mobile functionality.
-          </p>
-
-          <div className="grid gap-5 md:grid-cols-3">
-
-            {[
-              {
-                number: "01",
-                icon: Code2,
-                title: "Application Layer",
-                subtitle: "React + Vite",
-                description:
-                  "Reusable React components provide the user interface and application logic.",
-              },
-              {
-                number: "02",
-                icon: Database,
-                title: "Backend Layer",
-                subtitle: "Supabase",
-                description:
-                  "Authentication, database operations and backend services support application functionality.",
-              },
-              {
-                number: "03",
-                icon: Smartphone,
-                title: "Native Layer",
-                subtitle: "Capacitor",
-                description:
-                  "Capacitor connects the web application to Android and iOS environments and native device capabilities.",
-              },
-            ].map((layer) => {
-              const Icon = layer.icon;
-
-              return (
-                <div
-                  key={layer.number}
-                  className="rounded-3xl border border-white/10 bg-[#1B2940] p-8"
-                >
-
-                  <div className="mb-10 flex items-center justify-between">
-                    <Icon size={28} className="text-blue-400" />
-
-                    <span className="text-sm text-slate-500">
-                      {layer.number}
-                    </span>
-                  </div>
-
-                  <p className="mb-3 text-xs font-semibold uppercase tracking-widest text-blue-400">
-                    {layer.subtitle}
-                  </p>
-
-                  <h3 className="mb-4 text-2xl font-semibold">
-                    {layer.title}
-                  </h3>
-
-                  <p className="leading-relaxed text-slate-400">
-                    {layer.description}
-                  </p>
-
-                </div>
-              );
-            })}
-
-          </div>
-
-        </div>
-      </section>
+      <StaffAppArchitecture />
 
       {/* ENGINEERING CHALLENGES */}
 
-      <section className="bg-[#172337] px-6 py-24 md:px-10 md:py-28">
+      <section className="bg-[#172337] px-6 py-16 md:px-10 md:py-20">
 
         <div className="mx-auto max-w-7xl">
 
@@ -403,7 +324,7 @@ export default function StaffAppCaseStudy() {
             ENGINEERING DECISIONS
           </p>
 
-          <h2 className="mb-14 text-4xl font-semibold tracking-tight md:text-6xl">
+          <h2 className="mb-14 text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
             Solving the challenges behind the app.
           </h2>
 
@@ -457,7 +378,7 @@ export default function StaffAppCaseStudy() {
 
       {/* RESULT */}
 
-      <section className="px-6 py-24 md:px-10 md:py-28">
+      <section className="px-6 py-16 md:px-10 md:py-20">
 
         <div className="mx-auto max-w-7xl">
 
@@ -465,7 +386,7 @@ export default function StaffAppCaseStudy() {
             THE OUTCOME
           </p>
 
-          <h2 className="max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl">
+          <h2 className="max-w-4xl text-3xl font-semibold tracking-tight sm:text-4xl lg:text-5xl">
             From a business need
             <br />
             to a working application.
@@ -477,12 +398,12 @@ export default function StaffAppCaseStudy() {
             operational requirements.
           </p>
 
-          <p className="mt-5 max-w-3xl leading-relaxed text-slate-400">
-            The project includes a working React application, Supabase
-            integration, native mobile configuration and Android build
-            generation. iOS development and distribution preparation
-            remain ongoing.
-          </p>
+<p className="mt-5 max-w-3xl leading-relaxed text-slate-400">
+  The project includes a fully functional React application,
+  Supabase integration, native mobile capabilities and working
+  builds for both Android and iOS. The application runs on
+  both platforms using a shared codebase powered by Capacitor.
+</p>
 
           <div className="mt-12 flex flex-wrap gap-4">
 
@@ -501,7 +422,7 @@ export default function StaffAppCaseStudy() {
             </div>
 
             <div className="flex items-center gap-3 rounded-2xl border border-white/10 bg-[#1B2940] px-6 py-4">
-              <RefreshCw size={20} className="text-blue-400" />
+              <CheckCircle2 size={20} className="text-emerald-400" />
               <span className="text-sm text-slate-200">
                 iOS Development
               </span>

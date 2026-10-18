@@ -16,11 +16,9 @@ import {
   Code2,
 } from "lucide-react";
 
-import WorkflowDiagram from "../components/WorkflowDiagram";
 import Navbar from "../components/Navbar";
 import SEO from "../components/SEO";
-
-const ACCENT = "#8B5CF6";
+import AutomationShowcase from "../components/AutomationShowcase";
 
 const technologies = [
   "n8n",
@@ -31,34 +29,6 @@ const technologies = [
   "Excel",
   "Google Drive",
   "Gmail",
-];
-
-const workflowSteps = [
-  {
-    title: "Business Systems",
-    description: "TiM.POS reporting data and MitDenkt calendar information.",
-    icon: "database",
-  },
-  {
-    title: "Data Collection",
-    description: "Browser automation retrieves reporting exports.",
-    icon: "browser",
-  },
-  {
-    title: "Data Processing",
-    description: "JavaScript processes and structures reporting data.",
-    icon: "code",
-  },
-  {
-    title: "Orchestration",
-    description: "n8n coordinates the reporting workflow.",
-    icon: "workflow",
-  },
-  {
-    title: "Report Delivery",
-    description: "Reports are prepared for Drive storage and email delivery.",
-    icon: "cloud",
-  },
 ];
 
 const engineeringChallenges = [
@@ -102,17 +72,17 @@ const engineeringChallenges = [
 
 function SectionHeading({ eyebrow, title, description }) {
   return (
-    <div className="mb-14">
-      <p className="mb-5 text-xs font-semibold uppercase tracking-[0.3em] text-violet-400">
+    <div className="mb-10 md:mb-12">
+      <p className="mb-4 text-xs font-semibold uppercase tracking-[0.25em] text-violet-400">
         {eyebrow}
       </p>
 
-      <h2 className="max-w-4xl text-4xl font-semibold tracking-tight md:text-6xl">
+      <h2 className="max-w-4xl text-3xl font-semibold leading-tight tracking-tight sm:text-4xl lg:text-5xl">
         {title}
       </h2>
 
       {description && (
-        <p className="mt-7 max-w-3xl text-lg leading-relaxed text-slate-400">
+        <p className="mt-5 max-w-3xl text-base leading-relaxed text-slate-400 md:text-lg">
           {description}
         </p>
       )}
@@ -135,7 +105,7 @@ export default function BusinessAutomationCaseStudy() {
 
       {/* HERO */}
 
-      <section className="relative overflow-hidden border-b border-white/10 bg-[#172337] px-6 py-24 md:px-10 md:py-28">
+      <section className="relative overflow-hidden border-b border-white/10 bg-[#172337] px-6 py-16 md:px-10 md:py-20">
 
         <div className="pointer-events-none absolute right-0 top-0 h-96 w-96 rounded-full bg-violet-500/10 blur-[120px]" />
 
@@ -150,7 +120,7 @@ export default function BusinessAutomationCaseStudy() {
               CASE STUDY 03 / WORKFLOW AUTOMATION
             </p>
 
-            <h1 className="max-w-5xl text-5xl font-semibold tracking-tight md:text-7xl">
+            <h1 className="max-w-5xl text-4xl font-semibold tracking-tight sm:text-5xl lg:text-6xl">
               Business
               <br />
               <span className="text-violet-400">
@@ -194,9 +164,13 @@ export default function BusinessAutomationCaseStudy() {
         </div>
       </section>
 
+      {/* INTERACTIVE WORKFLOW SHOWCASE */}
+
+<AutomationShowcase />
+
       {/* THE CHALLENGE */}
 
-      <section className="px-6 py-24 md:px-10 md:py-28">
+      <section className="px-6 py-16 md:px-10 md:py-20">
         <div className="mx-auto max-w-7xl">
 
           <SectionHeading
@@ -264,40 +238,10 @@ export default function BusinessAutomationCaseStudy() {
 
       {/* ARCHITECTURE */}
 
-      <section className="bg-[#172337] px-6 py-24 md:px-10 md:py-28">
-        <div className="mx-auto max-w-7xl">
-
-          <SectionHeading
-            eyebrow="SYSTEM ARCHITECTURE"
-            title="How the automation works."
-            description="A modular system separates data collection, processing and workflow coordination."
-          />
-
-          <WorkflowDiagram
-            steps={workflowSteps}
-            accent={ACCENT}
-          />
-
-          <div className="mt-10 rounded-2xl border border-white/10 bg-[#1E2D43] p-6 md:p-8">
-            <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-violet-400">
-              Architecture Note
-            </p>
-
-            <p className="max-w-4xl leading-relaxed text-slate-400">
-              The diagram represents the main functional stages.
-              Individual reporting metrics may originate from
-              different source systems, and the workflows can
-              execute different processing paths depending on
-              the report type.
-            </p>
-          </div>
-
-        </div>
-      </section>
 
       {/* IMPLEMENTATION */}
 
-      <section className="px-6 py-24 md:px-10 md:py-28">
+      <section className="px-6 py-16 md:px-10 md:py-20">
         <div className="mx-auto max-w-7xl">
 
           <SectionHeading
@@ -371,7 +315,7 @@ export default function BusinessAutomationCaseStudy() {
 
       {/* ENGINEERING CHALLENGES */}
 
-      <section className="bg-[#172337] px-6 py-24 md:px-10 md:py-28">
+      <section className="bg-[#172337] px-6 py-16 md:px-10 md:py-20">
         <div className="mx-auto max-w-7xl">
 
           <SectionHeading
@@ -430,7 +374,7 @@ export default function BusinessAutomationCaseStudy() {
 
       {/* RESULT */}
 
-      <section className="px-6 py-24 md:px-10 md:py-28">
+      <section className="px-6 py-16 md:px-10 md:py-20">
         <div className="mx-auto max-w-7xl">
 
           <SectionHeading
